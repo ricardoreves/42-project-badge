@@ -6,7 +6,7 @@
 /*   By: rpinto-r <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 16:32:57 by rpinto-r          #+#    #+#             */
-/*   Updated: 2022/03/16 18:49:31 by rpinto-r         ###   ########.fr       */
+/*   Updated: 2022/03/16 19:50:48 by rpinto-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@ const {
 } = process.env;
 
 const sanitizeProjectSlug = (slug) => {
-  return slug.replace("42cursus-", "").replace(/[\-\_]+/g, "");
+  return slug
+    .toLowerCase()
+    .replace("42cursus-", "")
+    .replace(/[\-\_\s]+/g, "");
 };
 
 const createBadgeUrl = (label, message, color, options) => {
