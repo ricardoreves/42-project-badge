@@ -1,0 +1,31 @@
+{
+  "name": "42-project-badge",
+  "version": "0.0.1",
+  "description": "Generate a badge with the project score.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "npx nodemon server.js"
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "cachios": "^3.1.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/42-project-badge"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ],
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
