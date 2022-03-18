@@ -6,7 +6,7 @@
 /*   By: rpinto-r <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 16:32:57 by rpinto-r          #+#    #+#             */
-/*   Updated: 2022/03/16 19:50:48 by rpinto-r         ###   ########.fr       */
+/*   Updated: 2022/03/18 04:52:04 by rpinto-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,25 +76,24 @@ app.get("/users/:userName/project/:projectSlug", async (request, reply) => {
   try {
     let { userName, projectSlug } = request.params;
     const result = await getUserData(userName);
-    projectSlug = sanitizeProjectSlug(projectSlug);
+    const sanitizeProjectSlug = sanitizeProjectSlug(projectSlug);
 
     if (result.data.projects_users) {
       const projects = result.data.projects_users;
       const project = projects.find(
-        (item) => sanitizeProjectSlug(item.project.slug) === projectSlug
+        (item) => sanitizeProjectSlug(item.project.slug) === sanitizeProjectSlug
       );
       if (project) {
-        //console.log(project);
         if (project.final_mark)
           return replyBadge(
             reply,
             projectSlug,
-            `${project.final_mark}/100`,
+            `${project.final_mark}`,
             "2aae48",
             request.query
           );
         else
-          return replyBadge(reply, projectSlug, `0/100`, "blue", request.query);
+          return replyBadge(reply, projectSlug, `0`, "blue", request.query);
       } else
         return replyBadge(reply, "project", "invalid", "red", request.query);
     }
