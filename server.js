@@ -6,7 +6,7 @@
 /*   By: rpinto-r <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 16:32:57 by rpinto-r          #+#    #+#             */
-/*   Updated: 2022/03/18 04:52:04 by rpinto-r         ###   ########.fr       */
+/*   Updated: 2022/03/18 04:55:19 by rpinto-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,12 +76,12 @@ app.get("/users/:userName/project/:projectSlug", async (request, reply) => {
   try {
     let { userName, projectSlug } = request.params;
     const result = await getUserData(userName);
-    const sanitizeProjectSlug = sanitizeProjectSlug(projectSlug);
+    const slug = sanitizeProjectSlug(projectSlug);
 
     if (result.data.projects_users) {
       const projects = result.data.projects_users;
       const project = projects.find(
-        (item) => sanitizeProjectSlug(item.project.slug) === sanitizeProjectSlug
+        (item) => sanitizeProjectSlug(item.project.slug) === slug
       );
       if (project) {
         if (project.final_mark)
