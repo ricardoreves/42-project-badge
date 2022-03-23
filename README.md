@@ -1,7 +1,7 @@
 # 42 Project Badge
 
 ## :placard: Overview
-Generate a score badge for your 42 projects, for this I use the api's 42 and Shields.io
+Generate a score badge for your 42 projects, using the APIs of 42 and Shields.io
 
 ## :joystick: Usage
 
