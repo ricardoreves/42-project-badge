@@ -6,8 +6,8 @@ Generate a score badge for your 42 projects, for this I use the api's 42 and Shi
 ## :joystick: Usage
 
 1. It's simple, just change:
-- `:login42:` by your username
-- `:project42:` by your project name `libft`, `get-next-line`, `born2beroot`, `push-swap`, `exam-rank-02`, `cpp-module-00`, etc..
+- `:login42:` by username
+- `:project42:` by project name `libft`, `get-next-line`, `born2beroot`, `push-swap`, `exam-rank-02`, `cpp-module-00`, etc..
 ```
 [![42 Project Score](https://42-project-badge.glitch.me/users/:login42:/project/:project42:)](https://github.com/ricardoreves/42-project-badge)
 ``` 
