@@ -1,7 +1,7 @@
 # 42 Project Badge
 
 ## :placard: Overview
-Add a score badge to your 42 projects, the data is retrieved by the api 42
+Generate a score badge for your 42 projects, for this I use the 42 api and the Shields.io
 
 ## :joystick: Usage
 
