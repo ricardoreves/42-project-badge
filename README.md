@@ -20,7 +20,7 @@ Generate a score badge for your 42 projects, using the APIs of 42 and Shields.io
 ```
 https://42-project-badge.glitch.me/users/LOGIN42/projects
 ```
-2. Open link in new tab or use curl
+2. Open link in new tab or make a curl request
 ```
 curl https://42-project-badge.glitch.me/users/rpinto-r/projects
 ```
