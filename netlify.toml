@@ -1,0 +1,23 @@
+[build]
+  publish = "site"
+  functions = "functions"
+[[redirects]]
+  from = "/api/users/:userId/projects/:projectId"
+  to = "/badge?userId=:userId&projectId=:projectId"
+  status = 301
+[[redirects]]
+  from = "/badge"
+  to = "/.netlify/functions/badge"
+  status = 200
+[[redirects]]
+  from = "/api/users/:userId/projects"
+  to = "/projects?userId=:userId"
+  status = 301
+[[redirects]]
+  from = "/projects"
+  to = "/.netlify/functions/projects"
+  status = 200 
+[[redirects]]
+  from = "/"
+  to = "/site/index.html"
+  status = 200 
