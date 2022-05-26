@@ -2,9 +2,9 @@
 
 const axios = require("axios");
 
-const RED = "86222c";
-const BLUE = "009596";
-const GREEN = "4d853a";
+const RED = "d8624c";
+const BLUE = "1081c1";
+const GREEN = "46c018";
 
 const {
   PORT,
