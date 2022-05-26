@@ -2,9 +2,9 @@
 
 const axios = require("axios");
 
-const RED = "ff0000";
-const BLUE = "0000FF";
-const GREEN = "2aae48";
+const RED = "86222c";
+const BLUE = "009596";
+const GREEN = "4d853a";
 
 const {
   PORT,
@@ -78,7 +78,7 @@ const handler = async (event) =>
       if (!project)
         return replyBadge("project", "not_found", RED);
       if (project.final_mark)
-        return replyBadge(projectId, `${project.final_mark}`, GREEN);
+        return replyBadge(projectId, `${project.final_mark}/100`, GREEN);
       return replyBadge(projectId, 0, BLUE);
     }
   } catch (error)
